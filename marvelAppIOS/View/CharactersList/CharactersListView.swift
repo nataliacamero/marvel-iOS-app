@@ -55,11 +55,12 @@ struct CharactersListView: View {
                                 //Destino
                                 
                             } label: {
+                                Spacer()
                                 //La celda personalizada
                                 CharacterRowView(character: data)
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 320)
-                                    Spacer()
+                                    
                                 
                             }
                             
