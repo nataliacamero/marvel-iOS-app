@@ -10,7 +10,6 @@
 		E18C62782B082524001B8F05 /* marvelAppIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62772B082524001B8F05 /* marvelAppIOSApp.swift */; };
 		E18C627A2B082524001B8F05 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62792B082524001B8F05 /* Persistence.swift */; };
 		E18C627D2B082524001B8F05 /* marvelAppIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E18C627B2B082524001B8F05 /* marvelAppIOS.xcdatamodeld */; };
-		E18C627F2B082524001B8F05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C627E2B082524001B8F05 /* ContentView.swift */; };
 		E18C62812B082525001B8F05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18C62802B082525001B8F05 /* Assets.xcassets */; };
 		E18C62852B082525001B8F05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18C62842B082525001B8F05 /* Preview Assets.xcassets */; };
 		E18C628F2B082525001B8F05 /* marvelAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C628E2B082525001B8F05 /* marvelAppIOSTests.swift */; };
@@ -20,7 +19,8 @@
 		E18C62B52B082CF8001B8F05 /* CharactersDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62B42B082CF8001B8F05 /* CharactersDetailView.swift */; };
 		E18C62B82B082D66001B8F05 /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62B72B082D66001B8F05 /* CharactersListView.swift */; };
 		E18C62BC2B08334F001B8F05 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E18C62BB2B08334F001B8F05 /* KeychainSwift */; };
-		E18C62BF2B083526001B8F05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E18C62C12B083526001B8F05 /* Localizable.strings */; };
+		E18C62C42B083EF5001B8F05 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */; };
+		E18C62C62B084059001B8F05 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62C52B084059001B8F05 /* KeyChain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		E18C62772B082524001B8F05 /* marvelAppIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelAppIOSApp.swift; sourceTree = "<group>"; };
 		E18C62792B082524001B8F05 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E18C627C2B082524001B8F05 /* marvelAppIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = marvelAppIOS.xcdatamodel; sourceTree = "<group>"; };
-		E18C627E2B082524001B8F05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E18C62802B082525001B8F05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E18C62822B082525001B8F05 /* marvelAppIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = marvelAppIOS.entitlements; sourceTree = "<group>"; };
 		E18C62842B082525001B8F05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -58,8 +57,8 @@
 		E18C62B42B082CF8001B8F05 /* CharactersDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailView.swift; sourceTree = "<group>"; };
 		E18C62B72B082D66001B8F05 /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
 		E18C62B92B082EEA001B8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E18C62C02B083526001B8F05 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E18C62C22B083599001B8F05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		E18C62C52B084059001B8F05 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +122,7 @@
 				E18C62822B082525001B8F05 /* marvelAppIOS.entitlements */,
 				E18C627B2B082524001B8F05 /* marvelAppIOS.xcdatamodeld */,
 				E18C62832B082525001B8F05 /* Preview Content */,
-				E18C62C12B083526001B8F05 /* Localizable.strings */,
+				E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */,
 			);
 			path = marvelAppIOS;
 			sourceTree = "<group>";
@@ -157,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				E18C62792B082524001B8F05 /* Persistence.swift */,
-				E18C627E2B082524001B8F05 /* ContentView.swift */,
 			);
 			path = old;
 			sourceTree = "<group>";
@@ -179,6 +177,7 @@
 		E18C62AA2B082B75001B8F05 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E18C62C52B084059001B8F05 /* KeyChain.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -336,7 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18C62852B082525001B8F05 /* Preview Assets.xcassets in Resources */,
-				E18C62BF2B083526001B8F05 /* Localizable.strings in Resources */,
+				E18C62C42B083EF5001B8F05 /* Localizable.xcstrings in Resources */,
 				E18C62812B082525001B8F05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,9 +363,9 @@
 			files = (
 				E18C627D2B082524001B8F05 /* marvelAppIOS.xcdatamodeld in Sources */,
 				E18C62782B082524001B8F05 /* marvelAppIOSApp.swift in Sources */,
-				E18C627F2B082524001B8F05 /* ContentView.swift in Sources */,
 				E18C62AF2B082BE9001B8F05 /* LoginView.swift in Sources */,
 				E18C62B82B082D66001B8F05 /* CharactersListView.swift in Sources */,
+				E18C62C62B084059001B8F05 /* KeyChain.swift in Sources */,
 				E18C627A2B082524001B8F05 /* Persistence.swift in Sources */,
 				E18C62B52B082CF8001B8F05 /* CharactersDetailView.swift in Sources */,
 			);
@@ -403,18 +402,6 @@
 			targetProxy = E18C62952B082526001B8F05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E18C62C12B083526001B8F05 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E18C62C02B083526001B8F05 /* es */,
-				E18C62C22B083599001B8F05 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E18C629C2B082526001B8F05 /* Debug */ = {

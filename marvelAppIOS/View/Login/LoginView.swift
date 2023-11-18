@@ -15,5 +15,6 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
-        .environment(\.locale, .init(identifier: "en"))
+        .environment(\.locale, .init(identifier: "es"))
+       //.environment(\.locale, .init(identifier: "en"))
 }
