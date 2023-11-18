@@ -16,6 +16,11 @@
 		E18C628F2B082525001B8F05 /* marvelAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C628E2B082525001B8F05 /* marvelAppIOSTests.swift */; };
 		E18C62992B082526001B8F05 /* marvelAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62982B082526001B8F05 /* marvelAppIOSUITests.swift */; };
 		E18C629B2B082526001B8F05 /* marvelAppIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C629A2B082526001B8F05 /* marvelAppIOSUITestsLaunchTests.swift */; };
+		E18C62AF2B082BE9001B8F05 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62AE2B082BE9001B8F05 /* LoginView.swift */; };
+		E18C62B52B082CF8001B8F05 /* CharactersDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62B42B082CF8001B8F05 /* CharactersDetailView.swift */; };
+		E18C62B82B082D66001B8F05 /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62B72B082D66001B8F05 /* CharactersListView.swift */; };
+		E18C62BC2B08334F001B8F05 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E18C62BB2B08334F001B8F05 /* KeychainSwift */; };
+		E18C62BF2B083526001B8F05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E18C62C12B083526001B8F05 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,12 @@
 		E18C62942B082526001B8F05 /* marvelAppIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = marvelAppIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18C62982B082526001B8F05 /* marvelAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelAppIOSUITests.swift; sourceTree = "<group>"; };
 		E18C629A2B082526001B8F05 /* marvelAppIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelAppIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E18C62AE2B082BE9001B8F05 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E18C62B42B082CF8001B8F05 /* CharactersDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailView.swift; sourceTree = "<group>"; };
+		E18C62B72B082D66001B8F05 /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
+		E18C62B92B082EEA001B8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E18C62C02B083526001B8F05 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E18C62C22B083599001B8F05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18C62BC2B08334F001B8F05 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +111,19 @@
 		E18C62762B082524001B8F05 /* marvelAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				E18C62B92B082EEA001B8F05 /* Info.plist */,
+				E18C62AC2B082B88001B8F05 /* View */,
+				E18C62AB2B082B7D001B8F05 /* ViewModels */,
+				E18C62AA2B082B75001B8F05 /* Tools */,
+				E18C62A92B082B6D001B8F05 /* Services */,
+				E18C62A82B082B66001B8F05 /* Models */,
+				E18C62A72B082A99001B8F05 /* old */,
 				E18C62772B082524001B8F05 /* marvelAppIOSApp.swift */,
-				E18C62792B082524001B8F05 /* Persistence.swift */,
-				E18C627E2B082524001B8F05 /* ContentView.swift */,
 				E18C62802B082525001B8F05 /* Assets.xcassets */,
 				E18C62822B082525001B8F05 /* marvelAppIOS.entitlements */,
 				E18C627B2B082524001B8F05 /* marvelAppIOS.xcdatamodeld */,
 				E18C62832B082525001B8F05 /* Preview Content */,
+				E18C62C12B083526001B8F05 /* Localizable.strings */,
 			);
 			path = marvelAppIOS;
 			sourceTree = "<group>";
@@ -135,6 +153,77 @@
 			path = marvelAppIOSUITests;
 			sourceTree = "<group>";
 		};
+		E18C62A72B082A99001B8F05 /* old */ = {
+			isa = PBXGroup;
+			children = (
+				E18C62792B082524001B8F05 /* Persistence.swift */,
+				E18C627E2B082524001B8F05 /* ContentView.swift */,
+			);
+			path = old;
+			sourceTree = "<group>";
+		};
+		E18C62A82B082B66001B8F05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E18C62A92B082B6D001B8F05 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E18C62AA2B082B75001B8F05 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E18C62AB2B082B7D001B8F05 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E18C62AC2B082B88001B8F05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E18C62B62B082D3D001B8F05 /* CharactersList */,
+				E18C62B32B082CDB001B8F05 /* CharactersDetail */,
+				E18C62AD2B082BB4001B8F05 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E18C62AD2B082BB4001B8F05 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E18C62AE2B082BE9001B8F05 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E18C62B32B082CDB001B8F05 /* CharactersDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E18C62B42B082CF8001B8F05 /* CharactersDetailView.swift */,
+			);
+			path = CharactersDetail;
+			sourceTree = "<group>";
+		};
+		E18C62B62B082D3D001B8F05 /* CharactersList */ = {
+			isa = PBXGroup;
+			children = (
+				E18C62B72B082D66001B8F05 /* CharactersListView.swift */,
+			);
+			path = CharactersList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +240,9 @@
 			dependencies = (
 			);
 			name = marvelAppIOS;
+			packageProductDependencies = (
+				E18C62BB2B08334F001B8F05 /* KeychainSwift */,
+			);
 			productName = marvelAppIOS;
 			productReference = E18C62742B082524001B8F05 /* marvelAppIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -221,8 +313,12 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = E18C626B2B082524001B8F05;
+			packageReferences = (
+				E18C62BA2B08334E001B8F05 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = E18C62752B082524001B8F05 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18C62852B082525001B8F05 /* Preview Assets.xcassets in Resources */,
+				E18C62BF2B083526001B8F05 /* Localizable.strings in Resources */,
 				E18C62812B082525001B8F05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +365,10 @@
 				E18C627D2B082524001B8F05 /* marvelAppIOS.xcdatamodeld in Sources */,
 				E18C62782B082524001B8F05 /* marvelAppIOSApp.swift in Sources */,
 				E18C627F2B082524001B8F05 /* ContentView.swift in Sources */,
+				E18C62AF2B082BE9001B8F05 /* LoginView.swift in Sources */,
+				E18C62B82B082D66001B8F05 /* CharactersListView.swift in Sources */,
 				E18C627A2B082524001B8F05 /* Persistence.swift in Sources */,
+				E18C62B52B082CF8001B8F05 /* CharactersDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +403,18 @@
 			targetProxy = E18C62952B082526001B8F05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E18C62C12B083526001B8F05 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E18C62C02B083526001B8F05 /* es */,
+				E18C62C22B083599001B8F05 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E18C629C2B082526001B8F05 /* Debug */ = {
@@ -432,6 +544,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = marvelAppIOS/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -470,6 +583,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = marvelAppIOS/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -625,6 +739,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E18C62BA2B08334E001B8F05 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E18C62BB2B08334F001B8F05 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E18C62BA2B08334E001B8F05 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E18C627B2B082524001B8F05 /* marvelAppIOS.xcdatamodeld */ = {

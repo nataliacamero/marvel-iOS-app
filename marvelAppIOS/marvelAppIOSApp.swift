@@ -9,8 +9,7 @@ import SwiftUI
 
 @main
 struct marvelAppIOSApp: App {
-    let persistenceController = PersistenceController.shared
-
+    let persistenceController = PersistenceController.shared //Core data
     var body: some Scene {
         WindowGroup {
             ContentView()
