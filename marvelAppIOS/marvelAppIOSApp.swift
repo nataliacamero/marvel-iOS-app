@@ -12,7 +12,7 @@ struct marvelAppIOSApp: App {
     let persistenceController = PersistenceController.shared //Core data
     var body: some Scene {
         WindowGroup {
-            CharactersListView()
+            CharactersListView(characters: charactersArray)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -12,9 +12,6 @@
         }
       }
     },
-    "Characters" : {
-
-    },
     "Characters List View" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -36,9 +33,6 @@
         }
       }
     },
-    "close" : {
-
-    },
     "Item at %@" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -49,6 +43,9 @@
           }
         }
       }
+    },
+    "MARVEL" : {
+
     },
     "Rough" : {
 

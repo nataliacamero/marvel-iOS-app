@@ -7,7 +7,16 @@
 
 import SwiftUI
 
+// MARK: - Result
+struct Character: Identifiable {
+    let id: Int
+    let name, description: String
+    let photo: String
+}
+
+
 struct CharacterRowView: View {
+    var character: Character // Model
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             //Character image
@@ -21,33 +30,40 @@ struct CharacterRowView: View {
                 .background(.black)
                 .opacity(0.3)
             
-          
+            
+            //Character name
             VStack {
                 Spacer() //Pus the box to te bottom
                 HStack{
-                    
-                    //Character name
-                    Text("ROUGH")
+                    Text(character.name.uppercased())
                         .font(.title)
-                        .fontWeight(.semibold)
+                        .fontWeight(.bold)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.leading)
                         .padding(.leading)
+                        .opacity(0.9)
                     Spacer() // Push the text to the leading
                 }
-                .padding(0.0)
                 .frame(maxWidth: .infinity)
-                .frame(height: 69)
+                .frame(height: 80)
                 .background(.black)
             }
-            .frame(height: 70)
+            .frame(height: 80)
             .background(.red)
         })
-       
+        .padding(10)
+        .background(.white)
+        .opacity(0.95)
+        
         
     }
 }
 
 #Preview {
-    CharacterRowView()
+    CharacterRowView(character: Character(
+        id: 1, 
+        name: "Rough",
+        description: "The second most power mutant girl",
+        photo: "https://prueba/rough"
+    ))
 }
