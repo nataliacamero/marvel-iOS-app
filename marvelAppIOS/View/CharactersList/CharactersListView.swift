@@ -44,37 +44,33 @@ struct CharactersListView: View {
                 .bold()
                 .foregroundStyle(.white)
                 .opacity(0.9)
-            
-            ///
+            //Characters list
             NavigationStack {
                 ZStack {
-                    Color.red.edgesIgnoringSafeArea(.all)
+                    Color.white.edgesIgnoringSafeArea(.all)
                     List {
                         ForEach(characters) { data in
                             NavigationLink {
                                 //Destino
-                                
+                                CharactersDetailView(characters: charactersArray)
+                                    
                             } label: {
                                 Spacer()
                                 //La celda personalizada
                                 CharacterRowView(character: data)
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 320)
-                                    
-                                
                             }
-                            
-                        }.listRowBackground(Color.black)
+                        }
+                        .listRowBackground(Color.white)
+                        .navigationBarItems(trailing: EmptyView())
                     }
-                    .listStyle(PlainListStyle()) // Establece el estilo de la lista (puedes elegir el estilo que prefieras)
+                    .listStyle(PlainListStyle())
                 }
-                
-                
-            }
-            
-            ///
+            }  
         }
         .background(.red)
+        
     }
 }
 
