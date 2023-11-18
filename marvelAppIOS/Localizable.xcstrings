@@ -12,7 +12,11 @@
         }
       }
     },
+    "Characters" : {
+
+    },
     "Characters List View" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -32,6 +36,9 @@
         }
       }
     },
+    "close" : {
+
+    },
     "Item at %@" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -42,6 +49,9 @@
           }
         }
       }
+    },
+    "Rough" : {
+
     },
     "Select an item" : {
       "extractionState" : "stale",

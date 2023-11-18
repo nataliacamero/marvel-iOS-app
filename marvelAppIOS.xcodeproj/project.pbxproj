@@ -21,6 +21,7 @@
 		E18C62BC2B08334F001B8F05 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E18C62BB2B08334F001B8F05 /* KeychainSwift */; };
 		E18C62C42B083EF5001B8F05 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */; };
 		E18C62C62B084059001B8F05 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62C52B084059001B8F05 /* KeyChain.swift */; };
+		E1E1EF9D2B08EA770067FBF3 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E18C62B92B082EEA001B8F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E18C62C52B084059001B8F05 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		E18C62AC2B082B88001B8F05 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1E1EF9E2B08EA8A0067FBF3 /* CharacterRow */,
 				E18C62B62B082D3D001B8F05 /* CharactersList */,
 				E18C62B32B082CDB001B8F05 /* CharactersDetail */,
 				E18C62AD2B082BB4001B8F05 /* Login */,
@@ -221,6 +224,14 @@
 				E18C62B72B082D66001B8F05 /* CharactersListView.swift */,
 			);
 			path = CharactersList;
+			sourceTree = "<group>";
+		};
+		E1E1EF9E2B08EA8A0067FBF3 /* CharacterRow */ = {
+			isa = PBXGroup;
+			children = (
+				E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */,
+			);
+			path = CharacterRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18C627D2B082524001B8F05 /* marvelAppIOS.xcdatamodeld in Sources */,
+				E1E1EF9D2B08EA770067FBF3 /* CharacterRowView.swift in Sources */,
 				E18C62782B082524001B8F05 /* marvelAppIOSApp.swift in Sources */,
 				E18C62AF2B082BE9001B8F05 /* LoginView.swift in Sources */,
 				E18C62B82B082D66001B8F05 /* CharactersListView.swift in Sources */,

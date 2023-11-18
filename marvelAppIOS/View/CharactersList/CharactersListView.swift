@@ -9,9 +9,38 @@ import SwiftUI
 
 struct CharactersListView: View {
     var body: some View {
-        Text("Characters List View")
+        NavigationStack {
+            List{
+                NavigationLink {
+                    //Destino
+                    
+                } label: {
+                    //La celda personalizada
+                    CharacterRowView()
+                        .frame(height: 300)
+                    
+                    
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 300)
+                
+                
+              
+              
+                
+            }
+            .navigationTitle("CHARACTERS")
+
+            
+           
+        }
+        
+       
     }
+    
+    
 }
+
 
 #Preview {
     CharactersListView()
