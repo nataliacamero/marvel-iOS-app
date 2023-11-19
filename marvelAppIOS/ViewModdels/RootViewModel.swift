@@ -13,6 +13,9 @@ final class RootViewModel: ObservableObject {
     
     var suscriptors = Set<AnyCancellable>()
     
+    init() {
+        self.getCharacters()
+    }
     
     func getCharacters() {
         guard let request = BaseNetwork().getSessionCharactersList() else {
