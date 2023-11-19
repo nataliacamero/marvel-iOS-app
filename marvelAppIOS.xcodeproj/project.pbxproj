@@ -23,6 +23,7 @@
 		E18C62C62B084059001B8F05 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62C52B084059001B8F05 /* KeyChain.swift */; };
 		E1E1EF9D2B08EA770067FBF3 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */; };
 		E1FB161A2B0A8AB0002400E2 /* RootModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB16192B0A8AB0002400E2 /* RootModels.swift */; };
+		E1FB161C2B0A8DBE002400E2 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB161B2B0A8DBE002400E2 /* BaseNetwork.swift */; };
 		E1FE85D72B0952B600D11985 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FE85D62B0952B600D11985 /* SeriesRowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		E18C62C52B084059001B8F05 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
 		E1FB16192B0A8AB0002400E2 /* RootModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModels.swift; sourceTree = "<group>"; };
+		E1FB161B2B0A8DBE002400E2 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		E1FE85D62B0952B600D11985 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 		E1FB16172B0A8A03002400E2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1FB161B2B0A8DBE002400E2 /* BaseNetwork.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				E18C627A2B082524001B8F05 /* Persistence.swift in Sources */,
 				E18C62B52B082CF8001B8F05 /* CharactersDetailView.swift in Sources */,
 				E1FE85D72B0952B600D11985 /* SeriesRowView.swift in Sources */,
+				E1FB161C2B0A8DBE002400E2 /* BaseNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
