@@ -22,6 +22,7 @@
 		E18C62C42B083EF5001B8F05 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */; };
 		E18C62C62B084059001B8F05 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62C52B084059001B8F05 /* KeyChain.swift */; };
 		E1E1EF9D2B08EA770067FBF3 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */; };
+		E1F6D8222B0A8463005517A6 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6D8212B0A8463005517A6 /* RootViewModel.swift */; };
 		E1FE85D72B0952B600D11985 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FE85D62B0952B600D11985 /* SeriesRowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E18C62C52B084059001B8F05 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
+		E1F6D8212B0A8463005517A6 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewModel.swift; path = marvelAppIOS/RootViewModel.swift; sourceTree = SOURCE_ROOT; };
 		E1FE85D62B0952B600D11985 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 		E18C62AB2B082B7D001B8F05 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E1F6D8212B0A8463005517A6 /* RootViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F6D8222B0A8463005517A6 /* RootViewModel.swift in Sources */,
 				E18C627D2B082524001B8F05 /* marvelAppIOS.xcdatamodeld in Sources */,
 				E1E1EF9D2B08EA770067FBF3 /* CharacterRowView.swift in Sources */,
 				E18C62782B082524001B8F05 /* marvelAppIOSApp.swift in Sources */,
