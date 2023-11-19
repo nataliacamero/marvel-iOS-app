@@ -63,7 +63,6 @@ struct CharactersListView: View {
                             }
                         }
                         .listRowBackground(Color.white)
-                        .navigationBarItems(trailing: EmptyView())
                     }
                     .listStyle(PlainListStyle())
                 }
