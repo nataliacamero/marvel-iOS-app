@@ -21,32 +21,32 @@ struct WelcomeElement: Codable {
 // MARK: - DataClass
 struct DataClass: Codable {
     let offset, limit, total, count: Int
-    let results: [Result]
+    let results: [CharacterList]
 }
 
-// MARK: - Result
-struct Result: Codable {
+// MARK: - Character
+struct CharacterList: Codable, Identifiable {
     let id: Int
     let name, description: String
     let modified: Date
     let thumbnail: Thumbnail
     let resourceURI: String
-    let comics, series: Comics
+    let series: Series
     let stories: Stories
-    let events: Comics
+    let events: Series
     let urls: [URLElement]
 }
 
-// MARK: - Comics
-struct Comics: Codable {
+// MARK: - Series
+struct Series: Codable {
     let available: Int
     let collectionURI: String
-    let items: [ComicsItem]
+    let items: [SeriesItem]
     let returned: Int
 }
 
 // MARK: - ComicsItem
-struct ComicsItem: Codable {
+struct SeriesItem: Codable {
     let resourceURI: String
     let name: String
 }
