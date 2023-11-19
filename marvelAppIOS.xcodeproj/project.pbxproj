@@ -22,6 +22,7 @@
 		E18C62C42B083EF5001B8F05 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */; };
 		E18C62C62B084059001B8F05 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62C52B084059001B8F05 /* KeyChain.swift */; };
 		E1E1EF9D2B08EA770067FBF3 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */; };
+		E1FB161A2B0A8AB0002400E2 /* RootModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FB16192B0A8AB0002400E2 /* RootModels.swift */; };
 		E1FE85D72B0952B600D11985 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FE85D62B0952B600D11985 /* SeriesRowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		E18C62C32B083EF5001B8F05 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E18C62C52B084059001B8F05 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
+		E1FB16192B0A8AB0002400E2 /* RootModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModels.swift; sourceTree = "<group>"; };
 		E1FE85D62B0952B600D11985 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,10 +118,10 @@
 			children = (
 				E18C62B92B082EEA001B8F05 /* Info.plist */,
 				E18C62AC2B082B88001B8F05 /* View */,
-				E18C62AB2B082B7D001B8F05 /* ViewModels */,
 				E18C62AA2B082B75001B8F05 /* Tools */,
-				E18C62A92B082B6D001B8F05 /* Services */,
-				E18C62A82B082B66001B8F05 /* Models */,
+				E1FB16182B0A8A45002400E2 /* ViewModdels */,
+				E1FB16172B0A8A03002400E2 /* Services */,
+				E1FB16162B0A89FA002400E2 /* Models */,
 				E18C62A72B082A99001B8F05 /* old */,
 				E18C62772B082524001B8F05 /* marvelAppIOSApp.swift */,
 				E18C62802B082525001B8F05 /* Assets.xcassets */,
@@ -164,33 +166,12 @@
 			path = old;
 			sourceTree = "<group>";
 		};
-		E18C62A82B082B66001B8F05 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		E18C62A92B082B6D001B8F05 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		E18C62AA2B082B75001B8F05 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				E18C62C52B084059001B8F05 /* KeyChain.swift */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		E18C62AB2B082B7D001B8F05 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E18C62AC2B082B88001B8F05 /* View */ = {
@@ -235,6 +216,28 @@
 				E1E1EF9C2B08EA770067FBF3 /* CharacterRowView.swift */,
 			);
 			path = CharacterRow;
+			sourceTree = "<group>";
+		};
+		E1FB16162B0A89FA002400E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1FB16192B0A8AB0002400E2 /* RootModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1FB16172B0A8A03002400E2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E1FB16182B0A8A45002400E2 /* ViewModdels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModdels;
 			sourceTree = "<group>";
 		};
 		E1FE85D52B09529D00D11985 /* SeriesRow */ = {
@@ -386,6 +389,7 @@
 				E18C627D2B082524001B8F05 /* marvelAppIOS.xcdatamodeld in Sources */,
 				E1E1EF9D2B08EA770067FBF3 /* CharacterRowView.swift in Sources */,
 				E18C62782B082524001B8F05 /* marvelAppIOSApp.swift in Sources */,
+				E1FB161A2B0A8AB0002400E2 /* RootModels.swift in Sources */,
 				E18C62AF2B082BE9001B8F05 /* LoginView.swift in Sources */,
 				E18C62B82B082D66001B8F05 /* CharactersListView.swift in Sources */,
 				E18C62C62B084059001B8F05 /* KeyChain.swift in Sources */,
