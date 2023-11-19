@@ -9,19 +9,20 @@ import Foundation
 import Combine
 
 final class RootViewModel: ObservableObject {
-    @Published var characters: [CharacterList]?
+    @Published var data: [String:CharacterList]?
+    @Published var characters: [CharacterList] = []
     
     var suscriptors = Set<AnyCancellable>()
     
     init() {
         self.getCharacters()
     }
-    
-    func getCharacters() {
+   
+    func getCharacters() -> [CharacterList] {
         guard let request = BaseNetwork().getSessionCharactersList() else {
              print("Error: Invalid request")
-             return
-         }
+            return []        
+        }
         
         URLSession.shared
             .dataTaskPublisher(for: request)
@@ -36,7 +37,7 @@ final class RootViewModel: ObservableObject {
                 //Everything is ok
                 return $0.data
             }
-            .decode(type: [CharacterList].self, decoder: JSONDecoder())
+            .decode(type: [String: CharacterList].self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main) // We recive it in the main trade
             .sink { completion in
                 switch completion {
@@ -46,9 +47,11 @@ final class RootViewModel: ObservableObject {
                     print("Response received successfully...")
                 }
             } receiveValue: { data in
-                self.characters = data
+                print("data:-->", data)
+                self.characters = data.compactMap({ $0.value})
             }
             .store(in: &suscriptors)
+        
+        return self.characters
     }
-    
 }
