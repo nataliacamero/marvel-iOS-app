@@ -45,9 +45,8 @@ let previewCharactersArray = [CharacterList]()
 
 
 struct CharactersListView: View {
-    //var characters: [Character] // Model
     @EnvironmentObject var rootViewModel: RootViewModel
-    var characters: [CharacterList]
+    
     var body: some View {
         VStack {
             Spacer()
@@ -61,20 +60,24 @@ struct CharactersListView: View {
                 ZStack {
                     Color.white.edgesIgnoringSafeArea(.all)
                     List {
-                        ForEach(characters) { data in
-                            NavigationLink {
-                                //Destino
-                                CharactersDetailView(characters: charactersArray)
-                                    
-                            } label: {
-                                Spacer()
-                                //La celda personalizada
-                                CharacterRowView(character: data)
-                                    .frame(maxWidth: .infinity)
-                                    .frame(height: 320)
+                        if let data = rootViewModel.dataCharacters?.data.results {
+                            ForEach(data) { data in
+                                NavigationLink {
+                                    //Destino
+                                    //TODO: Enviar id de personaje
+                                    CharactersDetailView(characters: charactersArray)
+                                        
+                                } label: {
+                                    Spacer()
+                                    //La celda personalizada
+                                    CharacterRowView(character: data)
+                                        .frame(maxWidth: .infinity)
+                                        .frame(height: 320)
+                                }
                             }
+                            .listRowBackground(Color.white)
                         }
-                        .listRowBackground(Color.white)
+                       
                     }
                     .listStyle(PlainListStyle())
                 }
@@ -87,6 +90,6 @@ struct CharactersListView: View {
 
 
 #Preview {
-    CharactersListView(characters: previewCharactersArray)
+    CharactersListView()
         .environmentObject(RootViewModel())
 }

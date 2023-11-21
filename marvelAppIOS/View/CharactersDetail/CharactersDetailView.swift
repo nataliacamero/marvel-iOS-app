@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CharactersDetailView: View {
+    
     var characters: [Character] // Model
     var body: some View {
         ZStack {

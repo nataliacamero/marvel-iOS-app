@@ -16,14 +16,10 @@ struct Character: Identifiable {
 
 
 struct CharacterRowView: View {
+    @EnvironmentObject var rootViewModel: RootViewModel
     var character: CharacterList // Model
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
-            //Character image
-            //            Image(Thumbnail(path: character.thumbnail.path, thumbnailExtension: .jpg))
-            //                .resizable()
-            //                .opacity(1)
-            
             //Prueba data
             AsyncImage(url: URL(string: "\(character.thumbnail.path)\(character.thumbnail.thumbnailExtension)")) { photo in
                 //foto descargada
@@ -67,8 +63,6 @@ struct CharacterRowView: View {
         .padding(10)
         .background(.white)
         .opacity(0.95)
-        
-        
     }
 }
 

@@ -12,12 +12,12 @@ struct marvelAppIOSApp: App {
     let persistenceController = PersistenceController.shared //Core data
 
     //ViewMOdel global
-        @ObservedObject var rootViewModel = RootViewModel()
+    @ObservedObject var rootViewModel = RootViewModel() // Global inizialitation
     
     
     var body: some Scene {
         WindowGroup {
-            CharactersListView(characters: rootViewModel.characters)
+            CharactersListView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     .environmentObject(rootViewModel)
         }

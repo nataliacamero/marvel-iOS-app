@@ -51,20 +51,15 @@ enum endpoints: String {
 struct BaseNetwork {
     
     //request for carachteres
-    func getSessionCharactersList() -> URLRequest? {
+    func getSessionCharactersList() -> URLRequest {
         var urlString = "\(urlServer)\(endpoints.charactersList.rawValue)?\(timeStamp)\(apiKey)\(md5hash)"
         urlString += "&orderBy=-modified" // Descending sort
         
         // Creating the request
-        guard let url = URL(string: urlString) else {
-            print("Invalid URL: \(urlString)")
-            return nil
-        }
-        
-        var request: URLRequest = URLRequest(url: url)
+        var request: URLRequest = URLRequest(url: URL(string: urlString)!)
         request.httpMethod = HTTPMethods.get
         request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
-        print("url", url)
+        print("url", request)
         return request
     }
 }
