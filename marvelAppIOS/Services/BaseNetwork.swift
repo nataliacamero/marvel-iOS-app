@@ -5,10 +5,7 @@
 //  Created by Natalia Camero on 19/11/23.
 //
 
-import Foundation
-
-import UIKit
-import SwiftUI
+import Foundation //Framework
 
 
 /*
@@ -52,9 +49,11 @@ enum endpoints: String {
 }
 
 struct BaseNetwork {
-    //request function
+    
+    //request for carachteres
     func getSessionCharactersList() -> URLRequest? {
-        let urlString = "\(urlServer)\(endpoints.charactersList.rawValue)?\(timeStamp)\(apiKey)\(md5hash)"
+        var urlString = "\(urlServer)\(endpoints.charactersList.rawValue)?\(timeStamp)\(apiKey)\(md5hash)"
+        urlString += "&orderBy=-modified" // Descending sort
         
         // Creating the request
         guard let url = URL(string: urlString) else {
@@ -64,6 +63,7 @@ struct BaseNetwork {
         
         var request: URLRequest = URLRequest(url: url)
         request.httpMethod = HTTPMethods.get
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
         print("url", url)
         return request
     }
