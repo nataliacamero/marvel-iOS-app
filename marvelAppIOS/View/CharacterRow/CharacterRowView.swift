@@ -48,7 +48,7 @@ struct CharacterRowView: View {
             VStack {
                 Spacer() //Pus the box to te bottom
                 HStack{
-                    Text(character.name.uppercased())
+                    Text(character.name ?? "Place Holder")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -76,17 +76,9 @@ struct CharacterRowView: View {
     CharacterRowView(character: CharacterList(
         id: 1011334,
         name: "3-D Man",
-        description: "",
-        modified: Date(),
+        description: "Row dscription",
         thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
-        series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1),
-        stories: Stories(available: 21, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/stories", items: [], returned: 2),
-        events: Series(available: 1, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/events", items: [], returned: 3),
-        urls: [
-            URLElement(type: .detail, url: "http://marvel.com/characters/74/3-d_man?utm_campaign=apiRef&utm_source=f2ec88156a31feacb4c85986d1ef8ae5"),
-            URLElement(type: .wiki, url: "http://marvel.com/universe/3-D_Man_(Chandler)?utm_campaign=apiRef&utm_source=f2ec88156a31feacb4c85986d1ef8ae5"),
-            URLElement(type: .comiclink, url: "http://marvel.com/comics/characters/1011334/3-d_man?utm_campaign=apiRef&utm_source=f2ec88156a31feacb4c85986d1ef8ae5")
-        ]
+        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
+//        series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
     ))
 }
