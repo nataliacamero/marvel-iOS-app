@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct CharactersDetailView: View {
-    
-    var characters: [Character] // Model
+    var characters: [SeriesItem] // Model
     var body: some View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
             List {
                 ForEach(characters) { data in
                     //La celda personalizada
-                    SeriesRowView(character: data)
+                    SeriesRowView(character: data, idItem: UUID())
                         .frame(maxWidth: .infinity)
                         .frame(height: 600)
                 }
@@ -29,5 +28,5 @@ struct CharactersDetailView: View {
 }
 
 #Preview {
-    CharactersDetailView(characters: charactersArray)
+    CharactersDetailView(characters: seriesArray)
 }

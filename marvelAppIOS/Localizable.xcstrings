@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld" : {
+
+    },
     "Add Item" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -52,6 +55,9 @@
         }
       }
     },
+    "Error" : {
+
+    },
     "Item at %@" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -80,6 +86,7 @@
       }
     },
     "Rough" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

@@ -7,21 +7,13 @@
 
 import SwiftUI
 
-// MARK: - Result
-struct Character: Identifiable {
-    let id: Int
-    let name, description: String
-    let photo: String
-}
-
-
 struct CharacterRowView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
     var character: CharacterList // Model
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             //Prueba data
-            AsyncImage(url: URL(string: "\(character.thumbnail.path)\(character.thumbnail.thumbnailExtension)")) { photo in
+            AsyncImage(url: URL(string: "\(character.thumbnail.path).\(character.thumbnail.thumbnailExtension)")) { photo in
                 //foto descargada
                 photo
                     .resizable()
@@ -36,7 +28,7 @@ struct CharacterRowView: View {
             //Darken image
             Image(decorative: "")
                 .resizable()
-                .background(.black)
+                .background(.yellow)
                 .opacity(0.3)
             
             
@@ -72,7 +64,7 @@ struct CharacterRowView: View {
         name: "3-D Man",
         description: "Row dscription",
         thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
-//        series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
+       series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
     ))
 }

@@ -8,10 +8,24 @@
 import SwiftUI
 
 struct SeriesRowView: View {
-    var character: Character // Model
+    var character: SeriesItem// Model
+    var title = ""
+    var idItem = UUID()
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
           
+//            AsyncImage(url: URL(string: "\(character.thumbnail.path).\(character.thumbnail.thumbnailExtension)")) { photo in
+//                //foto descargada
+//                photo
+//                    .resizable()
+//                    .opacity(1)
+//                
+//            } placeholder: {
+//                Image(systemName: "photo")
+//                    .resizable()
+//                    .opacity(1)
+//            }
+            
             //Character image
             Image(.rouge)
                 .resizable()
@@ -26,7 +40,7 @@ struct SeriesRowView: View {
             VStack {
                 Spacer()
                 //Description
-                Text(character.description)
+                Text(title)
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
@@ -39,7 +53,7 @@ struct SeriesRowView: View {
             
             //Character name
             HStack{
-                Text(character.name.uppercased())
+                Text(character.name ?? "Default")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -64,10 +78,15 @@ struct SeriesRowView: View {
 }
 
 #Preview {
-    SeriesRowView(character: Character(
-        id: 1,
-        name: "Rough",
-        description: "The second most power mutant girl",
-        photo: "https://prueba/rough"
-    ))
+//    SeriesRowView(character: SeriesItem(
+//        id: 1011334,
+//        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334.jpg",
+//        name: "3-D Man"
+//    ))
+    
+    SeriesRowView(character: SeriesItem(
+        id: UUID(),
+        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334.jpg",
+        name: "3-D Man"
+    ), title: "Test title", idItem: UUID())
 }

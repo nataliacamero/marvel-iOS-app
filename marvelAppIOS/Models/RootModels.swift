@@ -29,7 +29,7 @@ struct CharacterList: Codable, Identifiable {
     let description: String?
     let thumbnail: Thumbnail
     let resourceURI: String?
-    //let series: Series
+    let series: Series
 }
 
 // MARK: - Series -
@@ -40,11 +40,24 @@ struct Series: Codable {
     let returned: Int?
 }
 
+//// MARK: - ComicsItem -
+//struct SeriesItem: Codable {
+//    let resourceURI: String?
+//    let name: String?
+//}
+
 // MARK: - ComicsItem -
-struct SeriesItem: Codable {
-    let resourceURI: String
-    let name: String
+struct SeriesItem: Codable, Identifiable {
+    let id: UUID?
+    let resourceURI: String?
+    let name: String?
 }
+
+//MARK: - SeriesItemId -
+struct SeriesItemId {
+    
+}
+
 
 // MARK: - Thumbnail -
 struct Thumbnail: Codable {

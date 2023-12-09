@@ -7,39 +7,64 @@
 
 import SwiftUI
 
-let charactersArray = [Character(
-    id: 1,
-    name: "Rough",
-    description: "The second most power mutant girl",
-    photo: "https://prueba/rough"
-), Character(
-    id: 2,
-    name: "Rough",
-    description: "The second most power mutant girl",
-    photo: "https://prueba/rough"
-), Character(
-    id: 3,
-    name: "Rough",
-    description: "The second most power mutant girl",
-    photo: "https://prueba/rough"
-), Character(
-    id: 4,
-    name: "Rough",
-    description: "The second most power mutant girl",
-    photo: "https://prueba/rough"
-), Character(
-    id: 5,
-    name: "Rough",
-    description: "The second most power mutant girl",
-    photo: "https://prueba/rough"
+let charactersArray: [CharacterList] = [CharacterList(
+    id: 1011334,
+    name: "3-D Man",
+    description: "Hola soy una descripción",
+    thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
+    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+),CharacterList(
+    id: 1011335,
+    name: "3-D Man",
+    description: "Hola soy una descripción",
+    thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
+    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+),CharacterList(
+    id: 1011336,
+    name: "3-D Man",
+    description: "Hola soy una descripción",
+    thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
+    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+),CharacterList(
+    id: 1011337,
+    name: "3-D Man",
+    description: "Hola soy una descripción",
+    thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
+    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+)]
+
+let seriesArray: [SeriesItem] = [SeriesItem(
+    id: UUID(),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334.jpg",
+    name: "3-D Man"
+), SeriesItem(
+    id: UUID(),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334.jpg",
+    name: "3-D Man"
+),SeriesItem(
+    id: UUID(),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334.jpg",
+    name: "3-D Man"
+),SeriesItem(
+    id: UUID(),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334.jpg",
+    name: "3-D Man"
+),SeriesItem(
+    id: UUID(),
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334.jpg",
+    name: "3-D Man"
 )]
 let character = CharacterList(
     id: 1011334,
     name: "3-D Man",
     description: "Hola soy una descripción",
     thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
-    //series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
+    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
 )
 let previewCharactersArray = [CharacterList]()
 
@@ -55,17 +80,21 @@ struct CharactersListView: View {
                 .bold()
                 .foregroundStyle(.white)
                 .opacity(0.9)
+            
+            
             //Characters list
             NavigationStack {
                 ZStack {
                     Color.white.edgesIgnoringSafeArea(.all)
+                    
                     List {
                         if let data = rootViewModel.dataCharacters?.data.results {
                             ForEach(data) { data in
                                 NavigationLink {
                                     //Destino
                                     //TODO: Enviar id de personaje
-                                    CharactersDetailView(characters: charactersArray)
+                                    Text("\(data.id)")
+                                    CharactersDetailView(characters: seriesArray)
                                         
                                 } label: {
                                     Spacer()
@@ -76,6 +105,8 @@ struct CharactersListView: View {
                                 }
                             }
                             .listRowBackground(Color.white)
+                        } else {
+                            Text("Error")
                         }
                        
                     }
