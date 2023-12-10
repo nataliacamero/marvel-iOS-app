@@ -28,7 +28,6 @@ struct CharacterRowView: View {
             //Darken image
             Image(decorative: "")
                 .resizable()
-                .background(.yellow)
                 .opacity(0.3)
             
             

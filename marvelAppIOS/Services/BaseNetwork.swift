@@ -53,8 +53,8 @@ struct BaseNetwork {
     
     //request for carachteres
     func getSessionCharactersList() -> URLRequest {
-        var urlString = "\(urlServer)\(endpoints.charactersList.rawValue)?\(timeStamp)\(apiKey)\(md5hash)"
-        urlString += "&orderBy=-modified" // Descending sort
+        let urlString = "\(urlServer)\(endpoints.charactersList.rawValue)?\(timeStamp)\(apiKey)\(md5hash)"
+//        urlString += "&orderBy=-modified" // Descending sort
         
         // Creating the request
         var request: URLRequest = URLRequest(url: URL(string: urlString)!)
@@ -66,7 +66,7 @@ struct BaseNetwork {
     
     //request for character series
     func getSessionCharacterSeries(id: String) -> URLRequest {
-        var urlString = "\(urlServer)\(endpoints.charactersList.rawValue)/\(id)\(endpoints.characterSeries.rawValue)?\(timeStamp)\(apiKey)\(md5hash)"
+        let urlString = "\(urlServer)\(endpoints.charactersList.rawValue)/\(id)\(endpoints.characterSeries.rawValue)?\(timeStamp)\(apiKey)\(md5hash)"
         print("urlStringSeries", urlString)
         
         //Creating the request

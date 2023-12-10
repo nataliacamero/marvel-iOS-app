@@ -12,50 +12,43 @@ struct SeriesRowView: View {
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
           
-//            AsyncImage(url: URL(string: "\(character.thumbnail.path).\(character.thumbnail.thumbnailExtension)")) { photo in
-//                //foto descargada
-//                photo
-//                    .resizable()
-//                    .opacity(1)
-//                
-//            } placeholder: {
-//                Image(systemName: "photo")
-//                    .resizable()
-//                    .opacity(1)
-//            }
-            
-            //Character image
-            Image(.rouge)
-                .resizable()
-                .opacity(1)
+            AsyncImage(url: URL(string: "\(series.thumbnail.path).\(series.thumbnail.thumbnailExtension)")) { photo in
+                //foto descargada
+                photo
+                    .resizable()
+                    .opacity(1)
+                
+            } placeholder: {
+                Image(systemName: "photo")
+                    .resizable()
+                    .opacity(1)
+            }
         
-            //Darken image
+            //White layer
             Image(decorative: "")
                 .resizable()
                 .background(.white)
-                .opacity(0.95)
+                .opacity(0.6)
 
             VStack {
                 Spacer()
                 //Description
                 if let description = series.description {
                     Text(description)
-                        .font(.headline)
+                        .font(.title2)
                         .fontWeight(.black)
                         .foregroundColor(.black)
                         .multilineTextAlignment(.leading)
                         .padding()
-                        .opacity(0.9)
                     Spacer() // Push the text to the center
                 } else {
                     
                     Text("No description available about this serie")
-                        .font(.headline)
+                        .font(.title2)
                         .fontWeight(.black)
                         .foregroundColor(.black)
                         .multilineTextAlignment(.leading)
                         .padding()
-                        .opacity(0.9)
                     Spacer() // Push the text to the center
              
                 }
@@ -85,12 +78,6 @@ struct SeriesRowView: View {
 }
 
 #Preview {
-//    SeriesRowView(character: SeriesItem(
-//        id: 1011334,
-//        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334.jpg",
-//        name: "3-D Man"
-//    ))
-    
     SeriesRowView(series: CharacterList(
         id: 1011334,
         name: "3-D Man",
