@@ -62,9 +62,9 @@ struct CharacterRowView: View {
     CharacterRowView(character: CharacterList(
         id: 1011334,
         name: "3-D Man",
+        title: "prueba de titulo",
         description: "Row dscription",
         thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
-       series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
     ))
 }

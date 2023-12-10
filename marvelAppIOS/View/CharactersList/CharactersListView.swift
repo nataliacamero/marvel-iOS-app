@@ -10,31 +10,31 @@ import SwiftUI
 let charactersArray: [CharacterList] = [CharacterList(
     id: 1011334,
     name: "3-D Man",
+    title: "2Prueba d titulo",
     description: "Hola soy una descripción",
     thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
-    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
 ),CharacterList(
     id: 1011335,
     name: "3-D Man",
+    title: "3Prueba d titulo",
     description: "Hola soy una descripción",
     thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
-    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
 ),CharacterList(
     id: 1011336,
     name: "3-D Man",
+    title: "4Prueba d titulo",
     description: "Hola soy una descripción",
     thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
-    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
 ),CharacterList(
     id: 1011337,
     name: "3-D Man",
+    title: "5Prueba d titulo",
     description: "Hola soy una descripción",
     thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
-    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
 )]
 
 let seriesArray: [SeriesItem] = [SeriesItem(
@@ -61,10 +61,10 @@ let seriesArray: [SeriesItem] = [SeriesItem(
 let character = CharacterList(
     id: 1011334,
     name: "3-D Man",
+    title: "6Prueba d titulo",
     description: "Hola soy una descripción",
     thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334",
-    series: Series(available: 3, collectionURI: "http://gateway.marvel.com/v1/public/characters/1011334/series", items: [], returned: 1)
+    resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
 )
 let previewCharactersArray = [CharacterList]()
 
@@ -92,10 +92,8 @@ struct CharactersListView: View {
                             ForEach(data) { data in
                                 NavigationLink {
                                     //Destino
-                                    //TODO: Enviar id de personaje
-                                    Text("\(data.id)")
-                                    CharactersDetailView(characters: seriesArray)
-                                        
+                                    CharactersDetailView(idCharacter: String(data.id))
+                                        .navigationTitle(data.name ?? "Hero Name")
                                 } label: {
                                     Spacer()
                                     //La celda personalizada

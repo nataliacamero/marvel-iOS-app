@@ -46,6 +46,7 @@ struct HTTPMethods {
 
 enum endpoints: String {
     case charactersList = "/v1/public/characters"
+    case characterSeries = "/series"
 }
 
 struct BaseNetwork {
@@ -60,6 +61,19 @@ struct BaseNetwork {
         request.httpMethod = HTTPMethods.get
         request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
         print("url", request)
+        return request
+    }
+    
+    //request for character series
+    func getSessionCharacterSeries(id: String) -> URLRequest {
+        var urlString = "\(urlServer)\(endpoints.charactersList.rawValue)/\(id)\(endpoints.characterSeries.rawValue)?\(timeStamp)\(apiKey)\(md5hash)"
+        print("urlStringSeries", urlString)
+        
+        //Creating the request
+        var request: URLRequest = URLRequest(url: URL(string: urlString)!)
+        request.httpMethod = HTTPMethods.get
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
+        print("url request series", request)
         return request
     }
 }

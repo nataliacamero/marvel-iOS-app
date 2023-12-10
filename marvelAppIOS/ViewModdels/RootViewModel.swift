@@ -13,7 +13,8 @@ enum Status {
 }
 
 final class RootViewModel: ObservableObject {
-    @Published var dataCharacters: ModelMarvel? //Request data
+    @Published var dataCharacters: ModelMarvel? //Request data character
+    @Published var seriesData: ModelMarvel? //Request data series
     @Published var status = Status.none // UI state
     
     var suscriptors = Set<AnyCancellable>()
@@ -23,7 +24,11 @@ final class RootViewModel: ObservableObject {
     }
    
     //Get charachers from API
+    //func getCharacters(id: String) {
     func getCharacters() {
+        //TODO: variable con ternario que decide a que servicio llamar
+//        var chooseSession = id ? BaseNetwork().getSessionCharacterSeries(id: id) : BaseNetwork().getSessionCharactersList()
+        
         URLSession.shared
             .dataTaskPublisher(for: BaseNetwork().getSessionCharactersList())
             .tryMap {
@@ -48,11 +53,41 @@ final class RootViewModel: ObservableObject {
                     print("Error: \(errorString.localizedDescription)")
                 case .finished:
                     //TODO: status here
-                    print("Response received successfully...")
+                    print("Response for charachters received successfully...")
                 }
             } receiveValue: { data in
-                print("data:-->", data)
+                print("dataCharacters:-->", data)
                 self.dataCharacters = data
+            }
+            .store(in: &suscriptors)
+    }
+    
+    
+    //Get data Series
+    func getSeries(id: String) {
+        URLSession.shared.dataTaskPublisher(for: BaseNetwork().getSessionCharacterSeries(id: id))
+            .tryMap {
+                //We evaluate de response, if it is 200, or not.
+                guard let response = $0.response as? HTTPURLResponse, response.statusCode == 200 else {
+                    //Error
+                    throw URLError(.badServerResponse)
+                }
+                
+                //if everything is ok
+                return $0.data
+            }
+            .decode(type: ModelMarvel.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                switch completion {
+                case .failure(let errorString):
+                    print("Error serching for series: \(errorString)")
+                case .finished:
+                    print("Response for series recived successfully....")
+                }
+            } receiveValue: { data in
+                print("series Data: -->, \(data) ")
+                self.seriesData =  data
             }
             .store(in: &suscriptors)
     }

@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%lld" : {
-
-    },
     "Add Item" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -84,6 +81,9 @@
           }
         }
       }
+    },
+    "No description available about this serie" : {
+
     },
     "Rough" : {
       "extractionState" : "stale",

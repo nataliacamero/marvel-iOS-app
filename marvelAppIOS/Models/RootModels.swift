@@ -26,10 +26,10 @@ struct CharactersData: Codable {
 struct CharacterList: Codable, Identifiable {
     let id: Int
     let name: String?
+    let title: String?
     let description: String?
     let thumbnail: Thumbnail
     let resourceURI: String?
-    let series: Series
 }
 
 // MARK: - Series -
@@ -51,11 +51,6 @@ struct SeriesItem: Codable, Identifiable {
     let id: UUID?
     let resourceURI: String?
     let name: String?
-}
-
-//MARK: - SeriesItemId -
-struct SeriesItemId {
-    
 }
 
 
