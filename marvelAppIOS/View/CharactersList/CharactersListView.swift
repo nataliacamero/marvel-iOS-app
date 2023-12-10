@@ -91,12 +91,12 @@ struct CharactersListView: View {
                         if let data = rootViewModel.dataCharacters?.data.results {
                             ForEach(data) { data in
                                 NavigationLink {
-                                    //Destino
+                                    //Destiny
                                     CharactersDetailView(idCharacter: String(data.id))
                                         .navigationTitle(data.name ?? "Hero Name")
                                 } label: {
                                     Spacer()
-                                    //La celda personalizada
+                                    //The custome cell
                                     CharacterRowView(character: data)
                                         .frame(maxWidth: .infinity)
                                         .frame(height: 320)
@@ -104,7 +104,7 @@ struct CharactersListView: View {
                             }
                             .listRowBackground(Color.white)
                         } else {
-                            Text("Error")
+                            Text("List placeholder")
                         }
                        
                     }
@@ -113,7 +113,6 @@ struct CharactersListView: View {
             }  
         }
         .background(.red)
-        
     }
 }
 

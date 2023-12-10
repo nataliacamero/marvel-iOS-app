@@ -52,9 +52,6 @@
         }
       }
     },
-    "Error" : {
-
-    },
     "Item at %@" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -65,6 +62,9 @@
           }
         }
       }
+    },
+    "List placeholder" : {
+
     },
     "MARVEL" : {
       "localizations" : {

@@ -12,9 +12,9 @@ struct CharacterRowView: View {
     var character: CharacterList // Model
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
-            //Prueba data
+            //Data test
             AsyncImage(url: URL(string: "\(character.thumbnail.path).\(character.thumbnail.thumbnailExtension)")) { photo in
-                //foto descargada
+                //Download photo
                 photo
                     .resizable()
                     .opacity(1)
