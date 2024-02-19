@@ -104,7 +104,7 @@ struct CharactersListView: View {
                             }
                             .listRowBackground(Color.white)
                         } else {
-                            Text("List placeholder")
+                            Text("Loading...")
                         }
                        
                     }
