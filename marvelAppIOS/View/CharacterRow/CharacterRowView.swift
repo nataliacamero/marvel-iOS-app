@@ -10,6 +10,12 @@ import SwiftUI
 struct CharacterRowView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
     var character: CharacterList // Model
+    
+    // Initializer
+    init(character: CharacterList) {
+        self.character = character
+    }
+    
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
             //Data test
@@ -61,12 +67,5 @@ struct CharacterRowView: View {
 }
 
 #Preview {
-    CharacterRowView(character: CharacterList(
-        id: 1011334,
-        name: "3-D Man",
-        title: "prueba de titulo",
-        description: "Row dscription",
-        thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
-        resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
-    ))
+    CharacterRowView(character: RootViewModel(test: true).getFakeCharacter())
 }
