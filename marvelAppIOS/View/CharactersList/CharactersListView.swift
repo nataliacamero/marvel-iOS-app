@@ -57,5 +57,5 @@ struct CharactersListView: View {
 
 #Preview {
     CharactersListView()
-        .environmentObject(RootViewModel())
+        .environmentObject(RootViewModel(test: true))
 }

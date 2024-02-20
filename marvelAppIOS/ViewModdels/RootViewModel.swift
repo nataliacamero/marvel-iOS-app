@@ -19,8 +19,13 @@ final class RootViewModel: ObservableObject {
     
     var suscriptors = Set<AnyCancellable>()
     
-    init() {
-        getCharacters()
+    init(test: Bool = false) {
+        if test {
+            testData()
+        }
+        else {
+            getCharacters()
+        }
     }
    
     //Get charachers from API
