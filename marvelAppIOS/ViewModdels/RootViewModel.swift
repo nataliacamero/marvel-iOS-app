@@ -24,7 +24,6 @@ final class RootViewModel: ObservableObject {
     }
    
     //Get charachers from API
-    //func getCharacters(id: String) {
     func getCharacters() {
         //TODO: variable con ternario que decide a que servicio llamar
 //        var chooseSession = id ? BaseNetwork().getSessionCharacterSeries(id: id) : BaseNetwork().getSessionCharactersList()
@@ -91,4 +90,33 @@ final class RootViewModel: ObservableObject {
             }
             .store(in: &suscriptors)
     }
+    
+    // ---- Testing and Design ----
+    
+    func testData() {
+        // We generated a test model with real answer data from postman
+        let hero1 = CharacterList(id: 1009351, name: "Hulk", title: "", description: "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets.", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0", thumbnailExtension: Extension.jpg), resourceURI: "http://gateway.marvel.com/v1/public/characters/1009351")
+        
+        
+        let hero2 = CharacterList(id: 1009165, name: "Avengers", title: "", description: "Earth's Mightiest Heroes joined forces to take on threats that were too big for any one hero to tackle. With a roster that has included Captain America, Iron Man, Ant-Man, Hulk, Thor, Wasp and dozens more over the years, the Avengers have come to be regarded as Earth's No. 1 team.", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/9/20/5102c774ebae7", thumbnailExtension: Extension.jpg), resourceURI: "http://gateway.marvel.com/v1/public/characters/1009165")
+        
+        let data = CharactersData(offset: 0, limit: 0, total: 2, count: 2, results: [hero1,hero2])
+        
+        self.dataCharacters = ModelMarvel(code: 200, status: "success", copyright: "2020", attributionText: "", attributionHTML: "", etag: "", data: data)
+        
+        self.status = Status.loaded
+    }
+    
+    func getFakeCharacter() -> CharacterList {
+            return CharacterList(
+                id: 1011337,
+                name: "3-D Man",
+                title: "test Title",
+                description: "Hi, I am a description",
+                thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
+                resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
+            )
+    }
+    
+    
 }
