@@ -17,6 +17,7 @@ struct CharactersDetailView: View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
             List {
+                //If there is data, unwrap series
                 if let data = rootViewModel.seriesData?.data.results {
                     ForEach(data) { data in
                         //The custome cell
@@ -27,10 +28,11 @@ struct CharactersDetailView: View {
                     .listRowBackground(Color.white)
                     .navigationBarItems(trailing: EmptyView())
                 }
-                
+                	
             }
             .listStyle(PlainListStyle()) // List Style
             .onAppear {
+                //Loading the series
                 rootViewModel.getSeries(id: idCharacter)
             }
         }
