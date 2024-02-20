@@ -112,8 +112,24 @@ final class RootViewModel: ObservableObject {
         self.status = Status.loaded
     }
     
+    func getFakeId() -> CharacterList.ID {
+        let fakeId = 1009351
+        return fakeId
+    }
+    
     func getFakeCharacter() -> CharacterList {
             return CharacterList(id: 1009351, name: "Hulk", title: "", description: "Caught in a gamma bomb explosion while trying to save the life of a teenager, Dr. Bruce Banner was transformed into the incredibly powerful creature called the Hulk. An all too often misunderstood hero, the angrier the Hulk gets, the stronger the Hulk gets.", thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0", thumbnailExtension: Extension.jpg), resourceURI: "http://gateway.marvel.com/v1/public/characters/1009351")
+    }
+    
+    func getFakeSerie() -> CharacterList {
+        return CharacterList(
+            id: 1011334,
+            name: "3-D Man",
+            title: "6 Prueba d titulo",
+            description: "Spider-Man's secret identity is Peter Benjamin Parker. Initially, Peter was depicted as a teenage high-school student and an orphan raised by his Aunt May and Uncle Ben in New York City after his parents Richard and Mary Parker died in a plane crash.",
+            thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
+            resourceURI: "http://gateway.marvel.com/v1/public/characters/1011334"
+        )
     }
     
     

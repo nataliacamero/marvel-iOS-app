@@ -40,6 +40,6 @@ struct CharactersDetailView: View {
 }
 
 #Preview {
-    CharactersDetailView(idCharacter: "1011495")
+    CharactersDetailView(idCharacter: "\(RootViewModel(test: true).getFakeId())")
         .environmentObject(RootViewModel())
 }
