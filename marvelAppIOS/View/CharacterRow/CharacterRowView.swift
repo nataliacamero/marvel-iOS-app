@@ -18,8 +18,9 @@ struct CharacterRowView: View {
                 photo
                     .resizable()
                     .opacity(1)
-                
+                	
             } placeholder: {
+                //Image by default
                 Image(systemName: "photo")
                     .resizable()
                     .opacity(1)
@@ -35,13 +36,15 @@ struct CharacterRowView: View {
             VStack {
                 Spacer() //Pus the box to te bottom
                 HStack{
-                    Text(character.name ?? "Place Holder")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.leading)
-                        .padding(.leading)
-                        .opacity(0.9)
+                    if let name = character.name {
+                    Text("\(name)")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.leading)
+                            .padding(.leading)
+                            .opacity(0.9)
+                    }
                     Spacer() // Push the text to the leading
                 }
                 .frame(maxWidth: .infinity)
