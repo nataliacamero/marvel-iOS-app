@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharactersDetailView: View {
-    @EnvironmentObject var rootViewModel: RootViewModel
+    @StateObject private var seriesViewModel = SeriesViewModdel()
     var idCharacter = ""
     init(idCharacter: String) {
         self.idCharacter = idCharacter
@@ -18,7 +18,7 @@ struct CharactersDetailView: View {
             Color.white.edgesIgnoringSafeArea(.all)
             List {
                 //If there is data, unwrap series
-                if let data = rootViewModel.seriesData?.data.results {
+                if let data = seriesViewModel.seriesData?.data.results {
                     ForEach(data) { data in
                         //The custome cell
                         SeriesRowView(series: data)
@@ -27,19 +27,20 @@ struct CharactersDetailView: View {
                     }
                     .listRowBackground(Color.white)
                     .navigationBarItems(trailing: EmptyView())
+                } else {
+                    Text("Loading...")
                 }
-                	
             }
             .listStyle(PlainListStyle()) // List Style
             .onAppear {
                 //Loading the series
-                rootViewModel.getSeries(id: idCharacter)
+                seriesViewModel.getSeries(id: idCharacter)
             }
         }
     }
 }
 
 #Preview {
-    CharactersDetailView(idCharacter: "\(RootViewModel(test: true).getFakeId())")
-        .environmentObject(RootViewModel())
+    CharactersDetailView(idCharacter: "\(SeriesViewModdel().getFakeId())")
+        .environmentObject(RootViewModel(test: true))
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E17087D02B83C8120065F570 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17087CF2B83C8120065F570 /* MockData.swift */; };
+		E18A58682B852920000F74A6 /* SeriesViewModdel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18A58672B852920000F74A6 /* SeriesViewModdel.swift */; };
 		E18C62782B082524001B8F05 /* marvelAppIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62772B082524001B8F05 /* marvelAppIOSApp.swift */; };
 		E18C627A2B082524001B8F05 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18C62792B082524001B8F05 /* Persistence.swift */; };
 		E18C627D2B082524001B8F05 /* marvelAppIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E18C627B2B082524001B8F05 /* marvelAppIOS.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		E17087CF2B83C8120065F570 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		E18A58672B852920000F74A6 /* SeriesViewModdel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesViewModdel.swift; sourceTree = "<group>"; };
 		E18C62742B082524001B8F05 /* marvelAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = marvelAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18C62772B082524001B8F05 /* marvelAppIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelAppIOSApp.swift; sourceTree = "<group>"; };
 		E18C62792B082524001B8F05 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				E1FB161D2B0A992B002400E2 /* RootViewModel.swift */,
+				E18A58672B852920000F74A6 /* SeriesViewModdel.swift */,
 			);
 			path = ViewModdels;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			files = (
 				E18C627D2B082524001B8F05 /* marvelAppIOS.xcdatamodeld in Sources */,
 				E1E1EF9D2B08EA770067FBF3 /* CharacterRowView.swift in Sources */,
+				E18A58682B852920000F74A6 /* SeriesViewModdel.swift in Sources */,
 				E18C62782B082524001B8F05 /* marvelAppIOSApp.swift in Sources */,
 				E17087D02B83C8120065F570 /* MockData.swift in Sources */,
 				E1FB161A2B0A8AB0002400E2 /* RootModels.swift in Sources */,

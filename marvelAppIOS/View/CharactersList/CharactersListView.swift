@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CharactersListView: View {
-    @EnvironmentObject var rootViewModel: RootViewModel //Enviroment variable that is injected into the delegate
+    //Enviroment variable that is injected into the delegate
+    @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
         VStack {
@@ -54,7 +55,7 @@ struct CharactersListView: View {
     }
 }
 
-
+	
 #Preview {
     CharactersListView()
         .environmentObject(RootViewModel(test: true))

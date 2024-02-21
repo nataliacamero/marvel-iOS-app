@@ -78,5 +78,5 @@ struct SeriesRowView: View {
 }
 
 #Preview {
-    SeriesRowView(series: RootViewModel(test: true).getFakeSerie())
+    SeriesRowView(series: SeriesViewModdel().getFakeSerie())
 }
