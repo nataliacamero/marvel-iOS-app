@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct CharactersDetailView: View {
-    @StateObject private var seriesViewModel = SeriesViewModdel()
+    @StateObject private var viewModel = SeriesViewModdel()
     var idCharacter = ""
     init(idCharacter: String) {
         self.idCharacter = idCharacter
     }
+    
     var body: some View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
             List {
+            switch viewModel.status {
+            case Status.none:
+                    Text("Detail None")
+            case Status.loading:
+                LoadingView()
+                    .frame(width: 600, height: 550)
+            case Status.error(error: let errorString):
+                Text("Error: \(errorString)")
+            case Status.loaded:
                 //If there is data, unwrap series
-                if let data = seriesViewModel.seriesData?.data.results {
+                if let data = viewModel.seriesData?.data.results {
                     ForEach(data) { data in
                         //The custome cell
                         SeriesRowView(series: data)
@@ -31,11 +41,13 @@ struct CharactersDetailView: View {
                     Text("Loading...")
                 }
             }
+            }
             .listStyle(PlainListStyle()) // List Style
             .onAppear {
                 //Loading the series
-                seriesViewModel.getSeries(id: idCharacter)
+                viewModel.getSeries(id: idCharacter)
             }
+          
         }
     }
 }

@@ -16,10 +16,15 @@ final class SeriesViewModdel: ObservableObject {
     
     //Get data Series from API
     func getSeries(id: String) {
+        
+        //We change to loaded status
+        self.status = Status.loading
+        
         URLSession.shared.dataTaskPublisher(for: BaseNetwork().getSessionCharacterSeries(id: id))
             .tryMap {
                 //We evaluate de response, if it is 200, or not.
                 guard let response = $0.response as? HTTPURLResponse, response.statusCode == 200 else {
+                    self.status = Status.error(error: "Error de servidor")
                     //Error
                     throw URLError(.badServerResponse)
                 }
@@ -32,8 +37,11 @@ final class SeriesViewModdel: ObservableObject {
             .sink { completion in
                 switch completion {
                 case .failure(let errorString):
+                    self.status = Status.error(error: errorString.localizedDescription)
                     print("Error serching for series: \(errorString)")
                 case .finished:
+                    self.status = Status.loaded
+                    print("SeriesModelStatus", self.status)
                     print("Response for series recived successfully....")
                 }
             } receiveValue: { data in

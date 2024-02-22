@@ -43,7 +43,12 @@ struct CharactersListView: View {
                             }
                             .listRowBackground(Color.white)
                         } else {
-                            Text("Loading...")
+                            Text("WAITING FOR HEROS 🕵️‍♂️ ...")
+                                .font(.title2)
+                                .bold()
+                                .fontDesign(.rounded)
+                                .foregroundStyle(.red)
+                                .frame(width: 600, height: 550)
                         }
                        
                     }

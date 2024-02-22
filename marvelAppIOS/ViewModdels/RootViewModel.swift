@@ -41,6 +41,7 @@ final class RootViewModel: ObservableObject {
                 guard let response = $0.response as? HTTPURLResponse,
                       response.statusCode == 200 else {
                     //TODO: State here
+                    self.status = Status.error(error: "Error de servidor")
                     //Error
                     throw URLError(.badServerResponse)
                 }	
@@ -54,11 +55,13 @@ final class RootViewModel: ObservableObject {
                 switch completion {
                 case .failure(let errorString):
                     //TODO: status here
+                    self.status = Status.error(error: errorString.localizedDescription)
                     print("Error searching for characters: \(errorString)")
                     print("Error: \(errorString.localizedDescription)")
                 case .finished:
                     //TODO: status here
-                    print("Response for charachters received successfully...")
+                    self.status = Status.loaded
+                    print("Response for characters received successfully...")
                 }
             } receiveValue: { data in
                 print("dataCharacters:-->", data)

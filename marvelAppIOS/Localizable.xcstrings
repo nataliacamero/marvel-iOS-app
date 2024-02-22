@@ -55,13 +55,71 @@
         }
       }
     },
-    "Item at %@" : {
-      "extractionState" : "stale",
+    "Detail None" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detail None"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "Detalle vacío"
+          }
+        }
+      }
+    },
+    "Error: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error: %@"
+          }
+        }
+      }
+    },
+    "Item at %@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Item at %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elemento %@"
+          }
+        }
+      }
+    },
+    "Loading ..." : {
+
+    },
+    "Loading series..." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading series..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando series..."
           }
         }
       }
@@ -99,7 +157,20 @@
       }
     },
     "No description available about this serie" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No description available about this serie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay descripción disponible para esta serie."
+          }
+        }
+      }
     },
     "Rough" : {
       "extractionState" : "stale",
@@ -130,13 +201,14 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : ""
+            "value" : "Selecciona un elemento"
           }
         }
       }
     },
     "Test" : {
       "comment" : "Localizable.strings\n  marvelAppIOS\n\n  Created by Natalia Camero on 18/11/23.",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -148,6 +220,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Test ESP"
+          }
+        }
+      }
+    },
+    "WAITING FOR HEROS 🕵️‍♂️ ..." : {
+
+    },
+    "Waiting for heros..." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting for heros..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esperando por heroes..."
           }
         }
       }
