@@ -93,11 +93,35 @@
 		E107C20E2B89204000AE79E2 /* marvelAppIOSTestsA */ = {
 			isa = PBXGroup;
 			children = (
-				E107C20F2B89204000AE79E2 /* marvelAppIOSTestsA.swift */,
-				E107C2192B8CE17A00AE79E2 /* testingMockData.swift */,
-				E107C21B2B8F605500AE79E2 /* seriesTest.swift */,
+				E107C2242B90BA6800AE79E2 /* mockTest */,
+				E107C2232B90BA2700AE79E2 /* herosTest */,
+				E107C2202B90BA0700AE79E2 /* seriesTest */,
 			);
 			path = marvelAppIOSTestsA;
+			sourceTree = "<group>";
+		};
+		E107C2202B90BA0700AE79E2 /* seriesTest */ = {
+			isa = PBXGroup;
+			children = (
+				E107C21B2B8F605500AE79E2 /* seriesTest.swift */,
+			);
+			path = seriesTest;
+			sourceTree = "<group>";
+		};
+		E107C2232B90BA2700AE79E2 /* herosTest */ = {
+			isa = PBXGroup;
+			children = (
+				E107C20F2B89204000AE79E2 /* marvelAppIOSTestsA.swift */,
+			);
+			path = herosTest;
+			sourceTree = "<group>";
+		};
+		E107C2242B90BA6800AE79E2 /* mockTest */ = {
+			isa = PBXGroup;
+			children = (
+				E107C2192B8CE17A00AE79E2 /* testingMockData.swift */,
+			);
+			path = mockTest;
 			sourceTree = "<group>";
 		};
 		E18A586C2B861D2C000F74A6 /* Tools */ = {
