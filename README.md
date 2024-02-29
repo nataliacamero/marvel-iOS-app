@@ -20,7 +20,10 @@ Al abrir la aplicación, serás recibido con la pantalla principal que muestra u
 
 ## Capturas de pantalla
 A continuación, se muestran algunas capturas de pantalla de la aplicación:
-![Alt Text](Image URL)
+![marvel_first_screen](https://github.com/nataliacamero/marvel-iOS-app/blob/main/marvel_first_screen.png)
+
+
+![marvel_second_screen](https://github.com/nataliacamero/marvel-iOS-app/blob/main/marvel_second_screen.png)
 
 
 
