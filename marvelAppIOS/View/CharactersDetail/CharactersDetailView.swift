@@ -18,29 +18,29 @@ struct CharactersDetailView: View {
         ZStack {
             Color.white.edgesIgnoringSafeArea(.all)
             List {
-            switch viewModel.status {
-            case Status.none:
-                    Text("Detail None")
-            case Status.loading:
-                LoadingView()
-                    .frame(width: 600, height: 550)
-            case Status.error(error: let errorString):
-                Text("Error: \(errorString)")
-            case Status.loaded:
-                //If there is data, unwrap series
-                if let data = viewModel.seriesData?.data.results {
-                    ForEach(data) { data in
-                        //The custome cell
-                        SeriesRowView(series: data)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 600)
+                switch viewModel.status {
+                case Status.none:
+                        Text("Detail None")
+                case Status.loading:
+                    LoadingView()
+                        .frame(width: 600, height: 550)
+                case Status.error(error: let errorString):
+                    Text("Error: \(errorString)")
+                case Status.loaded:
+                    //If there is data, unwrap series
+                    if let data = viewModel.seriesData?.data.results {
+                        ForEach(data) { data in
+                            //The custome cell
+                            SeriesRowView(series: data)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 600)
+                        }
+                        .listRowBackground(Color.white)
+                        .navigationBarItems(trailing: EmptyView())
+                    } else {
+                        Text("Loading...")
                     }
-                    .listRowBackground(Color.white)
-                    .navigationBarItems(trailing: EmptyView())
-                } else {
-                    Text("Loading...")
                 }
-            }
             }
             .listStyle(PlainListStyle()) // List Style
             .onAppear {
@@ -48,7 +48,8 @@ struct CharactersDetailView: View {
                 viewModel.getSeries(id: idCharacter)
             }
           
-        }
+            }
+        
     }
 }
 

@@ -58,6 +58,7 @@ struct SeriesRowView: View {
             HStack{
                 if let title = series.title {
                     Text("\(title.capitalized)")
+                        .accessibility(identifier: "title")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
