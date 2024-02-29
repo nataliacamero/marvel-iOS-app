@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharactersDetailView: View {
-    @StateObject private var viewModel = SeriesViewModdel()
+    @ObservedObject private var viewModel = SeriesViewModdel()
     var idCharacter = ""
     init(idCharacter: String) {
         self.idCharacter = idCharacter

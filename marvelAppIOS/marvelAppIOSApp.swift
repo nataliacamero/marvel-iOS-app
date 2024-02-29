@@ -12,7 +12,7 @@ struct marvelAppIOSApp: App {
     let persistenceController = PersistenceController.shared //Core data
 
     //ViewMOdel global
-    @ObservedObject var rootViewModel = RootViewModel() // Global inizialitation
+    @StateObject var rootViewModel = RootViewModel() // Global inizialitation
     
     
     var body: some Scene {
