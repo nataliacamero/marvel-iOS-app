@@ -20,12 +20,8 @@ Al abrir la aplicación, serás recibido con la pantalla principal que muestra u
 
 ## Capturas de pantalla
 A continuación, se muestran algunas capturas de pantalla de la aplicación:
-![marvel_first_screen](https://github.com/nataliacamero/marvel-iOS-app/blob/main/marvel_first_screen.png)
 
+<img src="https://github.com/nataliacamero/marvel-iOS-app/blob/main/marvel_first_screen.png" alt="marvel_first_screen" width="200"/>
 
-![marvel_second_screen](https://github.com/nataliacamero/marvel-iOS-app/blob/main/marvel_second_screen.png)
+<img src="https://github.com/nataliacamero/marvel-iOS-app/blob/main/marvel_second_screen.png" alt="marvel_second_screen" width="200"/>
 
-
-
-## Autor
-MarvelAppIOS fue desarrollado por [Natalia Camero Carreño].
